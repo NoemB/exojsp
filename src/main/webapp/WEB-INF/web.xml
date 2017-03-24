@@ -1,0 +1,17 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+	<servlet>
+		<servlet-name>BarcodeServlet</servlet-name>
+		 <!-- le nom de la classe implémentant la servlet (précédé du nom du package) -->
+    	<servlet-class>org.krysalis.barcode4j.servlet.BarcodeServlet</servlet-class>
+    </servlet>
+  
+  <!-- l'association de la servlet avec un motif d'URL -->
+  <servlet-mapping>
+    <servlet-name>BarcodeServlet</servlet-name>
+    <!-- le motif d'url (par exemple *.html ou /servlet) -->
+    <url-pattern>/resultat/codebar</url-pattern>
+  </servlet-mapping>
+</web-app>
